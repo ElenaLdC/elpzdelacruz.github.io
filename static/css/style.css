@@ -1,0 +1,121 @@
+/* Estilos generales */
+body {
+    font-family: 'Montserrat';
+    background-color: #c2e3de;
+    color: #000737;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px; /* Igual a la altura del header */
+    box-sizing: border-box ;
+}
+
+
+header {
+    background-color: #fafafa;
+    color: white;
+    text-align: center;
+    padding: 20px 0px;
+    position: fixed;
+    top: 0; /* Lo coloca en la parte superior */
+    left: 0; /* Lo alinea a la izquierda */
+    width: 100%; /* Ancho completo */
+    height: 45px; /* Define una altura para el header */
+    z-index: 1000;
+}
+
+.nav-link {
+    text-decoration: none; /* Elimina el subrayado */
+    color: #000737; /* Color del texto */
+    margin: 0 15px; /* Espaciado entre enlaces */
+    font-weight: bold; /* Negrita */
+}
+
+.contact-button {
+    background-color: #eaa4a4; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    border: none; /* Sin borde */
+    border-radius: 25px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.contact-button:hover {
+    background-color: #c2e3de; /* Color de fondo al pasar el ratón */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 150px;
+}
+
+.nav-left a {
+    color: #eaa4a4;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Montserrat';
+}
+
+.nav-icons-divider {
+    border-color: inherit;
+    border-left: 1.5px solid;
+    color: #eaa4a4;
+    margin: 0 10px;
+}
+
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.nav-right a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    flex: 1; /* Permite que el main ocupe el espacio restante */
+    background-color: #c2e3de;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0px;
+    background-color: #fafafa;
+    color: #eaa4a4;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+html, body {
+    height: 100%; /* Asegúrate de que el body y html ocupen el 100% de la altura */
+    margin: 0; /* Elimina márgenes predeterminados */
+}
+
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-Regular.otf') format('opentype'); /* Estilo regular */
+    font-weight: normal; /* Peso normal */
+    font-style: normal; /* Estilo normal */
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-Bold.otf') format('opentype'); /* Estilo negrita */
+    font-weight: bold; /* Peso negrita */
+    font-style: normal; /* Estilo normal */
+}
+
+.container{
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* El header y footer tienen tamaño automático, el main ocupa el espacio restante */
+    min-height: 100vh; /* Mínima altura de 100vh para ocupar toda la ventana */
+}

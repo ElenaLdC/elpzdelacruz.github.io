@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="nav-left">
+                <!-- Asegúrate de que este enlace lleve a la página de inicio -->
+                <a href="{{ "/" | relURL }}">{{ .Site.Params.name }}</a>
+            </div>
+            <nav>
+                <a class="nav-link" href="/proyectos/">Proyectos</a>
+                <a class="contact-button" href="/contacto/">Contacto</a>
+                <span class="nav-icons-divider"></span>
+                <div class="nav-link dark-theme-toggle">
+                    <span class="sr-only dark-theme-toggle-screen-reader-target"></span>
+                    <a>
+                        <span class="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {{ block "main" . }}{{ .Content }}{{ end }}
+    </main>
+
+    <footer>
+        <p>© {{ now.Year }} {{ .Site.Params.name }} - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

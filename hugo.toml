@@ -1,0 +1,10 @@
+baseURL = "http://localhost:1313/"
+languageCode = "es"
+title = "Mi Sitio Personal"
+enableRobotsTXT = true
+
+[params]
+  name = "Elena López de la Cruz"
+  email = "tunombre@email.com"
+  github = "https://github.com/tuperfil"
+  linkedin = "https://www.linkedin.com/in/tuperfil" 
